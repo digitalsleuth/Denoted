@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# Build output
+build/
+dist/
+
+# Editors and OS
+.idea/
+.vscode/
+*.wpu
+*.wpr
+Thumbs.db
+desktop.ini
+
+local/
+samples/
+@eaDir

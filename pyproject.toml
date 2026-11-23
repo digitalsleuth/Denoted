@@ -1,0 +1,44 @@
+[build-system]
+requires = ["setuptools >= 77.0.30"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["denoted*"]
+
+[tool.setuptools.package-data]
+"denoted._vendor.qt_themes" = ["LICENSE"]
+denoted = ["assets/denoted.*"]
+
+[tool.setuptools.dynamic]
+version = {attr = "denoted.__init__.__version__"}
+
+[project]
+name = "denoted"
+dynamic = ["version"]
+dependencies = [
+    "PyQt6",
+]
+requires-python = ">=3.10"
+authors = [
+  {name = "Corey Forman (digitalsleuth)", email = "corey@digitalsleuth.ca"}
+]
+maintainers = [
+  {name = "Corey Forman (digitalsleuth)", email = "corey@digitalsleuth.ca"}
+]
+description = "Viewer and parser for Windows 11 Notepad TabState and WindowState files"
+readme = "README.md"
+keywords = ["digital forensics", "dfir", "windows notepad", "tabstate", "windowstate"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Programming Language :: Python :: 3",
+  "Operating System :: OS Independent"
+]
+
+[project.optional-dependencies]
+build = ["pyinstaller"]
+
+[project.gui-scripts]
+denoted = "denoted.viewer:main"
+
+[project.scripts]
+denoted-cli = "denoted.cli:main"
