@@ -42,3 +42,5 @@ denoted-cli --list-users
 ## Notes
 
 State files can contain whatever was typed into a tab, so treat them, and any export made from them, as sensitive. Use `--no-text` (or leave tab text out in the export dialog) when you want a report without the content.
+
+My inspiration to develop this tool came after reading the research of AbdulRhman Alfaifi (https://u0041.co/posts/articals/exploring-windows-artifacts-notepad-files/).
